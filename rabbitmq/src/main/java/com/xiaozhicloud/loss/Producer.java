@@ -11,6 +11,8 @@ public class Producer {
 
   public static void main(String[] args) throws Exception {
     Channel channel = Utils.getChannel();
+    // 开启发布确认
+    channel.confirmSelect();
 
     channel.queueDeclare(TASK_QUEUE_NAME, true, false, false, null);
 
