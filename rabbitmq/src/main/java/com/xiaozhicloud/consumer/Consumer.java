@@ -27,6 +27,7 @@ public class Consumer {
       System.out.println("接收消息"+ new String(message.getBody()));
     };
 
+    // 取消消息
     CancelCallback cancelCallback = consumerTag -> {
       System.out.println("消费消息被中断");
     };
