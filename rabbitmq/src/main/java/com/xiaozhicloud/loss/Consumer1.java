@@ -24,7 +24,7 @@ public class Consumer1 {
     };
 
     boolean autoAck = false;
-
+    channel.basicQos(1);
     channel.basicConsume(TASK_QUEUE_NAME,autoAck,deliverCallback,cancelCallback);
 
   }
